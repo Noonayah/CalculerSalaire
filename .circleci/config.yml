@@ -1,6 +1,8 @@
 version: 2
 jobs:
-      build:
-            steps:
-            - run : python -m unittest test.py
-     
+  build:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - run: python -m unittest test.py
