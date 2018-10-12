@@ -1,9 +1,6 @@
-
-
-      - run:
-          name: run tests
-          command: |
-           
-            python -m unittest test.py
-
+version: 2
+jobs:
+      build:
+            steps:
+            - run : python -m unittest test.py
      
